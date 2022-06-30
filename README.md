@@ -1,3 +1,14 @@
+# Mini Project ReactJS
+
+## how to use this
+
+`
+1. git clone 
+2. cd mini-project-reactjs
+3. npm i
+4. npm start
+`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

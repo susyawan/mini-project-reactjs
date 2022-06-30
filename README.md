@@ -2,12 +2,12 @@
 
 ## how to use this
 
-`
+```
 1. git clone 
 2. cd mini-project-reactjs
 3. npm i
 4. npm start
-`
+```
 
 # Getting Started with Create React App
 

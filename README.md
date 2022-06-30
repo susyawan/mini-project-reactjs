@@ -1,14 +1,27 @@
 # Mini Project ReactJS
 
-## how to use this
+**Note: sebelum clone repositori ini pastikan sudah clone repositori [fake rest api services](https://github.com/iyurisko/fake-rest-api-services.git)**
+
+## cara menggunakan
 
 ```
-1. git clone 
+1. git clone https://github.com/susyawan/mini-project-reactjs.git
 2. cd mini-project-reactjs
 3. npm i
 4. npm start
 ```
 
+
+
+
+
+
+
+
+
+
+
+<!-- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -78,4 +91,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

@@ -112,7 +112,7 @@ const FormModalProduct = ({
           </div>
         </FormGroup>
         <div className="d-flex justify-content-center">
-          <Button onClick={handleSubmit} className="me-1">
+          <Button color="primary" onClick={handleSubmit} className="me-1">
             {type}
           </Button>
           <Button onClick={() => setFormVisible(false)} className="ms-1">
@@ -152,10 +152,10 @@ const FormModalDelete = ({
     <>
       <Form>
         <div className="p-2">
-          Delete <strong>{product}</strong> ?
+          Delete <strong style={{color: 'black'}}>" {product} "</strong> ?
         </div>
         <div className="d-flex justify-content-center align-items-center">
-          <Button onClick={handleDelete}>{type}</Button>&nbsp;&nbsp;
+          <Button color="danger" onClick={handleDelete}>{type}</Button>&nbsp;&nbsp;
           <Button onClick={() => setFormVisible(false)}>Cancel</Button>
         </div>
       </Form>

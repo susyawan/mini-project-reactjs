@@ -1,6 +1,6 @@
 # Mini Project ReactJS
 
-**Note: sebelum clone repositori ini pastikan sudah clone repositori [fake rest api services](https://github.com/iyurisko/fake-rest-api-services.git)**
+**Note: sebelum clone repositori ini pastikan sudah clone repositori [fake rest api services](https://github.com/iyurisko/fake-rest-api-services.git) atau bisa menggunakan rest api lain**
 
 ## cara menggunakan
 

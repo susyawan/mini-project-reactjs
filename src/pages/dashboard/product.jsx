@@ -32,30 +32,38 @@ const Product = () => {
     <>
       <Header />
       <div className="d-flex flex-column justify-content-center align-items-center text-center my-3">
-        <div className="my-4">
-          <h1>Product</h1>
-        </div>
-        <div className="d-flex flex-wrap w-75">
+        {productList.length === 0 ? (
+          <div className="my-5">
+            <h1>Product Not Found</h1>
+          </div>
+        ) : (
+          <div className="my-4">
+            <h1>Product</h1>
+          </div>
+        )}
+        <div className="d-flex justify-content-center flex-wrap w-75">
           <div className="cont_card justify-content-center gap-3 w-100">
-            {productList.map((item, index) => (
-              <div className="box_card">
-                <Card>
-                  <CardBody className="bg-dark">
-                    <div
-                      className="position-absolute rounded-circle text-light text-center bg-danger"
-                      style={{ width: "30px", height: "30px" }}
-                    >
-                      {index + 1}
-                    </div>
-                    <CardTitle tag="h5">{item.product}</CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      Quantity : {item.quantity}
-                    </CardSubtitle>
-                    <CardText>Price : {formatCurrent(item.price)}</CardText>
-                  </CardBody>
-                </Card>
-              </div>
-            ))}
+            {productList.length > 0
+              ? productList.map((item, index) => (
+                  <div className="box_card">
+                    <Card>
+                      <CardBody className="bg-dark">
+                        <div
+                          className="position-absolute rounded-circle text-light text-center bg-danger"
+                          style={{ width: "30px", height: "30px" }}
+                        >
+                          {index + 1}
+                        </div>
+                        <CardTitle tag="h5">{item.product}</CardTitle>
+                        <CardSubtitle className="mb-2 text-muted" tag="h6">
+                          Quantity : {item.quantity}
+                        </CardSubtitle>
+                        <CardText>Price : {formatCurrent(item.price)}</CardText>
+                      </CardBody>
+                    </Card>
+                  </div>
+                ))
+              : null}
           </div>
         </div>
       </div>

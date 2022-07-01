@@ -11,6 +11,7 @@ request.interceptors.response.use(
   (res) => res.data,
   (err) => {
     // console.log('helper', err);
+    
 
     if (err.response?.status === 409) {
       document.getElementById('usernameRegister').focus();

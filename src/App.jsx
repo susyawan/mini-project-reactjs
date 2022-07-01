@@ -1,5 +1,5 @@
 import { HeaderHome, HeaderProduct } from "./components";
-// import Register from "./pages/register";
+import Register from "./pages/register";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
 import NotFound from "./pages/notFound";
@@ -23,7 +23,7 @@ const RegisterLogin = () => {
       <div className="container-fluid d-flex flex-column justify-content-center">
         <div className="d-flex justify-content-center gap-5 mb-3 reg_column">
           <Login />
-          {/* <Register /> */}
+          <Register />
         </div>
       </div>
     </>

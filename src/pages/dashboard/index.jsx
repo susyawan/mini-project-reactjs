@@ -72,7 +72,7 @@ const Dashboard = () => {
             <h3 className="text-center mb-3">Product</h3>
           </div>
           <div className="px-3 py-3">
-            <Button onClick={AddProduct}>Add Product</Button>
+            <Button color="primary" onClick={AddProduct}>Add Product</Button>
           </div>
           <div>
             <Table hover size="sm">
@@ -82,27 +82,138 @@ const Dashboard = () => {
                   style={{ backgroundColor: "#829ebb" }}
                 >
                   <th
-                    style={{
-                      minWidth: "50px",
-                      width: "5%",
-                      borderRadius: "12px 0 0 0",
-                    }}
+                    style={
+                      productList.length === 0
+                        ? {
+                            minWidth: "50px",
+                            width: "5%",
+                            borderRadius: "12px 0 0 12px",
+                            borderBottom: "none",
+                          }
+                        : {
+                            minWidth: "50px",
+                            width: "5%",
+                            borderRadius: "12px 0 0 0",
+                            borderBottom: "2px solid #fff",
+                          }
+                    }
                   >
                     No
                   </th>
-                  <th style={{ minWidth: "50px", width: "22%" }}>
-                    Product Name
-                  </th>
-                  <th style={{ minWidth: "50px", width: "8%" }}>Quantity</th>
-                  <th style={{ minWidth: "50px", width: "17%" }}>Price</th>
-                  <th style={{ minWidth: "50px", width: "17%" }}>Total</th>
-                  <th style={{ minWidth: "50px", width: "11%" }}>Last Update</th>
+                  {productList.length === 0 ? (
+                    <>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "none",
+                          width: "22%",
+                        }}
+                      >
+                        Product Name
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "none",
+                          width: "8%",
+                        }}
+                      >
+                        Quantity
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "none",
+                          width: "17%",
+                        }}
+                      >
+                        Price
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "none",
+                          width: "17%",
+                        }}
+                      >
+                        Total
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "none",
+                          width: "11%",
+                        }}
+                      >
+                        Last Update
+                      </th>
+                    </>
+                  ) : (
+                    <>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "2px solid #fff",
+                          width: "22%",
+                        }}
+                      >
+                        Product Name
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "2px solid #fff",
+                          width: "8%",
+                        }}
+                      >
+                        Quantity
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "2px solid #fff",
+                          width: "17%",
+                        }}
+                      >
+                        Price
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "2px solid #fff",
+                          width: "17%",
+                        }}
+                      >
+                        Total
+                      </th>
+                      <th
+                        style={{
+                          minWidth: "50px",
+                          borderBottom: "2px solid #fff",
+                          width: "11%",
+                        }}
+                      >
+                        Last Update
+                      </th>
+                    </>
+                  )}
+
                   <th
-                    style={{
-                      minWidth: "50px",
-                      width: "20%",
-                      borderRadius: "0 12px 0 0",
-                    }}
+                    style={
+                      productList.length === 0
+                        ? {
+                            minWidth: "50px",
+                            width: "20%",
+                            borderRadius: "0 12px 12px 0",
+                            borderBottom: "none",
+                          }
+                        : {
+                            minWidth: "50px",
+                            width: "20%",
+                            borderRadius: "0 12px 0 0",
+                            borderBottom: "2px solid #fff",
+                          }
+                    }
                   >
                     Action
                   </th>
@@ -187,7 +298,7 @@ const Dashboard = () => {
                           : null
                       }
                     >
-                      <div className="d-flex justify-content-center">
+                      <div className="d-flex justify-content-center wrap_btn">
                         <Button
                           onClick={() => UpdateProduct(item)}
                           className="me-1 py-1 px-2"
